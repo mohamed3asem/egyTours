@@ -1,0 +1,24 @@
+<% include partials/header %>
+<div class="container text-center">
+    <form action="/tours" method="POST" style="width:60%; margin: 8% auto 5% auto;" class="border p-4 shadow-sm">
+        <p class="float-left"> Create a New Tour</p>
+        <div class="form-group shadow-sm">
+            <input class="form-control" type="text" name="name" placeholder="name" value="<%= typeof name != 'undefined' ? name : ''%>"/>
+        </div>
+        <div class="form-group shadow-sm">
+            <input class="form-control" type="text" name="image" placeholder="image url" required value="<%= typeof image != 'undefined' ? price : ''%>"/>
+        </div>
+        <div class="form-group shadow-sm">
+                <input class="form-control" type="number" name="price" placeholder="price per night" required value="<%= typeof price != 'undefined' ? image : ''%>"/>
+            </div>
+        <div class="form-group">
+            <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="description" required><%= typeof description != 'undefined' ? description : '' %></textarea>
+        </div>
+        <div class="form-group shadow-sm">
+            <button type="submit" class="btn btn-lg btn-default btn-block btn-dark">submit</button>
+        </div>  
+    </form>
+    <a href="/">go back</a>
+</div>
+
+<% include partials/footer %>

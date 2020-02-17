@@ -1,0 +1,16 @@
+<% include partials/header %>
+
+<div class="container text-center">
+    <form action="/tours/<%= tourId %>/comments/<%= comment._id %>?_method=put" method="POST" style="width:60%; margin: 8% auto 5% auto;" class="border p-4 shadow-sm">
+        <p class="float-left"> Edit comment</p>
+        <div class="form-group shadow-sm">
+            <input class="form-control" type="text" name="comment" placeholder="comment" required value="<%= comment.content %>">
+        </div>
+        <div class="form-group shadow-sm">
+            <button type="submit" class="btn btn-lg btn-default btn-block btn-dark">submit</button>
+        </div>
+    </form>
+    <a href="/tours/<%= tourId %>">go back</a>
+</div>
+
+<% include partials/footer %>
